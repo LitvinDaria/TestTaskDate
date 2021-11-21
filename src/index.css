@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/*
+div[name="email-value"] {
+  display: none;
+}
+
+input[name="email-enabled"]:checked~div[name="email-value"] {
+  display:  inline-block;
+  }*/

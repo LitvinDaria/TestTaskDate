@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+ 
 import './App.css';
+import GetTime from './GetTime';
 
-function App() {
+   
+   
+function GetDateToday(props) {
+  var today = new Date(2021, 11, 11, 0, 15, 0, 0);
+  const hour = today.getHours();
+  const wish = `${(hour < 6 && 'Ночь') || (hour < 12 && 'Утро')|| (hour < 18 && 'День') || 'Вечер'} `;   
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <h1>Дата: {today.toLocaleDateString() + ""} </h1>
+    <GetTime />
+    <h1>Время суток: {wish} </h1>
     </div>
+   
+)
+ 
+}
+function App() {
+  return ( 
+    <div name="email-value">
+      <GetDateToday/>  
+      </div> 
   );
 }
 
-export default App;
+export default App
