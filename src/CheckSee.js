@@ -19,7 +19,7 @@ const Checkbox = ({ label, value, onChange }) => {
     element = (
       <div>      
         <App/>
-        <input type="checkbox" checked={value} onChange={onChange} /> 
+        <input type="checkbox" checked={value} onChange={onChange} />         
       </div>
     );
   
@@ -27,6 +27,7 @@ const Checkbox = ({ label, value, onChange }) => {
     else {
       element = (
         <div>          
+          <p>Информация скрыта</p>
           <input type="checkbox" checked={value} onChange={onChange} /> 
         </div>
       ); 
